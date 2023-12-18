@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <title>CRUD System clone</title>
+</head>
+<body>
+    <div class="container ">
+        <div class=" main-form w-75 mx-auto py-5">
+
+
+            <div class="title w-100 mb-4 text-center">
+                <h1 class="h4 p-1" "> -  Product Management System - </h1>
+            </div>
+
+            <div class=" productName form-group mb-3">
+                <label class=" mb-2" for="productName">Product Name</label>
+                <input id="productName" oninput="validationName(),emptyInput()"  class=" form-control" type="text">
+                <p id="messageName" class=" my-3 alert alert-danger d-none" >Product Name must start with a capital letter </br> And have 8 letters maximum </p>
+            </div>
+
+
+            <div class="form-group mb-3">
+                <label class=" mb-2" for="productPrice">Product Price</label>
+                <input id="productPrice"  oninput="validationPrice(),emptyInput()" class=" form-control" type="number">
+                <p id="messagePrice" class=" my-3 alert alert-danger d-none"> Invalid Input </p>
+            </div>
+
+
+            <div class="form-group mb-3">
+                <label class=" mb-2" for="productCat">Product Category</label>
+                <input id="productCat" class=" form-control" type="text">
+            </div>
+
+            <div class="form-group mb-3">
+                <label class=" mb-2" for="producDesc">Product Description</label>
+                <textarea class="form-control" name="producDesc" id="productDesc" ></textarea>
+            </div>
+
+            <div class="form-cta  d-flex flex-column justify-content-center align-items-center  w-100">
+                <button id="addBtn" onclick="addProduct()" class=" mx-auto py-2 mt-3 rounded product-btn btn btn-dark btn-sm w-50  text-white"> Add Product</button>
+                <button id="updateBtn" onclick="updateProduct()" class=" d-none update-btn  btn-warning mx-auto py-2 mt-3 rounded  btn btn-dark btn-sm w-50  text-white"> Update Product</button>
+
+            </div>
+
+            
+            
+
+
+
+
+
+
+            <input id="searchInput" oninput="searchProduct()" class="form-control my-5" type="text" placeholder="Search..." >
+
+
+
+
+
+
+            <table class=" table text-center my-5">
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody class="text-center" id="tableBody">
+                 
+                   
+                </tbody>
+
+            </table>
+
+        </div>
+       
+       
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

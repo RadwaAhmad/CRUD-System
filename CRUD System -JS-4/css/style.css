@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(245, 245, 245);
+    color: rgb(45, 45, 45);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.form-group textarea{
+    resize: none;
+}
+
+div.title {
+    color: rgb(235, 235, 235);
+    background-color: rgb(60, 60, 60);
+    padding: 7px;
+
+    border: solid transparent  ;
+    border-radius: 7px;
+    
+}
+
+.product-btn{
+
+    border: transparent;
+    background-color: rgb(63, 112, 237);
+
+}
+
+.update-btn {
+    border: transparent;
+
+    background-color:orange;
+}
+
+
+
+.main-form p{
+    font-size: 12px;
+
+}
